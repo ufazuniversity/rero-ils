@@ -13017,7 +13017,7 @@ msgstr "الفهرس الموحد"
 
 #: rero_ils/theme/templates/rero_ils/_frontpage_slogan_global.html:21
 #: rero_ils/theme/templates/rero_ils/_frontpage_slogan_test.html:21
-msgid "Get into your library"
+msgid "Get intoasds your library"
 msgstr "دخول إلى المكتبة"
 
 #: rero_ils/theme/templates/rero_ils/_frontpage_slogan_global.html:22

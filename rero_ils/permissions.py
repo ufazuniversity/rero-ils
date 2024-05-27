@@ -24,6 +24,7 @@ from flask_login import current_user
 from flask_principal import RoleNeed
 from flask_security import login_required, roles_required
 from invenio_access.permissions import Permission
+import requests
 
 from rero_ils.modules.users.models import UserRole
 
@@ -92,6 +93,20 @@ def login_and_patron():
     if len(current_patrons) == 0:
         return False, 403, None
     return True, 200, None
+# The code that takes the number of elements from the api
+# api_integration.py
+
+def get_datas_from_api():
+    url = "https://127.0.0.1:5000/api/documents/?type=docmaintype_book"
+    response = requests.get(url, verify=False)
+
+    if response.status_code == 200:
+        data = response.json()
+        total_value = data['hits']['total']['value']
+        return total_value
+    else:
+        print("Error:", response.status_code)
+        return None
 
 
 def can_access_professional_view(func):

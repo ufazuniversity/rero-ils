@@ -32,8 +32,7 @@ from rero_ils.modules.utils import cached
 
 from .menus import init_menu_lang, init_menu_profile, init_menu_tools
 from ..modules.organisations.api import Organisation
-from ..permissions import can_access_professional_view
-
+from ..permissions import can_access_professional_view,get_datas_from_api
 blueprint = Blueprint(
     'rero_ils',
     __name__,
@@ -85,17 +84,19 @@ def robots(timeout=60*60):  # 1 hour timeout
 
 @blueprint.route('/')
 def index():
+    total_value = get_datas_from_api()
     """Home Page."""
     return render_template('rero_ils/frontpage.html',
                            organisations=Organisation.get_all(),
                            viewcode=current_app.config.get(
-                               'RERO_ILS_SEARCH_GLOBAL_VIEW_CODE'))
+                               'RERO_ILS_SEARCH_GLOBAL_VIEW_CODE'),total_value = total_value)
 
 
 @blueprint.route('/<string:viewcode>')
 @blueprint.route('/<string:viewcode>/')
 @check_organisation_viewcode
 def index_with_view_code(viewcode):
+
     """Home Page."""
     if viewcode == current_app.config.get('RERO_ILS_SEARCH_GLOBAL_VIEW_CODE'):
         return redirect(url_for(
@@ -105,7 +106,7 @@ def index_with_view_code(viewcode):
         return render_template(
             'rero_ils/frontpage.html',
             organisations=Organisation.get_all(),
-            viewcode=viewcode
+            viewcode=viewcode,
         )
 
 

@@ -64,7 +64,7 @@ services:
     command: poetry run uwsgi /invenio/var/instance/uwsgi_rest.ini
     image: rero-ils-web-api
     ports:
-      - "5001"
+      - "5000"
     volumes:
       - static_data:/invenio/var/instance/static
     links:
@@ -124,3 +124,4 @@ services:
       service: es
 volumes:
   static_data:
+  

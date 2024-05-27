@@ -18,60 +18,47 @@
 #}
 <section class="col-md-4 order-1 order-md-1 px-4 pt-4">
   {% if current_i18n.language == 'en' %}
-  <h3>The project</h3>
-  <p>The RERO ILS project is the RERO+ Integrated Library System, using components of the <a href="https://inveniosoftware.org" class="rero-ils-external-link">Invenio</a> framework. This site provides a permanent, public demonstration instance of the software, with daily integration of new features.</p>
+  <h3>CONTACT</h3>
+  <p>UFAZ Website - <a href="https://www.ufaz.az/en/" target='_blank' class="rero-ils-external-link">www.ufaz.az</a> </p>
+  <p>(+994 12) 599-00-74</p>
+  <p>183 Nizami str., Baku,<br> AZ1000, Azerbaijan </p>
+  <p>UFAZ Information gmail - <a href="mailto:info@ufaz.az">info@ufaz.az</a>
+  </p>
+
   {% endif  %}
   {% if current_i18n.language == 'fr' %}
-  <h3>Le projet</h3>
-  <p>Le projet RERO ILS est le système de gestion de bibliothèque de RERO+ basé sur le framework <a href="https://inveniosoftware.org" class="rero-ils-external-link">Invenio</a>. Ce site propose une instance publique et permanente du logiciel, avec une intégration continue des nouvelles fonctionnalités.</p>
+  <h3>CONTACT</h3>
+  <p>Site Web de l'UFAZ – <a href="https://www.ufaz.az/en/" target='_blank' class="rero-ils-external-link">www.ufaz.az</a> </p>
+  <p>(+994 12) 599-00-74</p>
+  <p>183 rue Nizami, Bakou,<br> AZ1000, Aserbaidschan </p>
+  <p>UFAZ-Informations-Gmail – <a href="mailto:info@ufaz.az">info@ufaz.az</a>
+  </p>
   {% endif  %}
   {% if current_i18n.language == 'de' %}
-  <h3>Das Projekt</h3>
-  <p>Das Projekt RERO ILS ist das Bibliotheksverwaltungssystem von RERO+ auf der Basis des <a href="https://inveniosoftware.org" class="rero-ils-external-link">Invenio</a> Frameworks zu erschaffen. Diese Website bietet eine permanente, öffentliche Demonstration der Software an. Neue Funktionen werden täglich integriert.</p>
+  <h3>KONTAKT</h3>
+  <p>UFAZ-Website – <a href="https://www.ufaz.az/en/" target='_blank' class="rero-ils-external-link">www.ufaz.az</a> </p>
+  <p>(+994 12) 599-00-74</p>
+  <p>183 Nizami str., Baku,<br> AZ1000, Aserbaidschan </p>
+  <p>UFAZ-Informations-Gmail – <a href="mailto:info@ufaz.az">info@ufaz.az</a>
+  </p>
   {% endif  %}
   {% if current_i18n.language == 'it' %}
-  <h3>Il progetto</h3>
-  <p>Il progetto RERO ILS è il Sistema di Biblioteca Integrato RERO+, utilizzando componenti del framework <a href="https://inveniosoftware.org" class="rero-ils-external-link">Invenio</a>. Questo sito fornisce una dimostrazione permanente e pubblica del software, con integrazione quotidiana di nuove funzionalità.</p>
+  <h3>CONTATTO</h3>
+  <p>Sito web UFAZ – <a href="https://www.ufaz.az/en/" target='_blank' class="rero-ils-external-link">www.ufaz.az</a> </p>
+  <p>(+994 12) 599-00-74</p>
+  <p>183 Nizami str., Baku,<br> AZ1000, Aserbaidschan </p>
+  <p>UFAZ-Informazioni-Gmail – <a href="mailto:info@ufaz.az">info@ufaz.az</a>
+  </p>
   {% endif  %}
   <section class="mt-4">
-      <section class="d-flex flex-row">
-        <a href="https://github.com/rero/rero-ils" class="align-self-center" title="{{ _('Link to the RERO ILS code source on GitHub') }}">
-          <i class="fa fa-2x fa-github card-img-top text-dark"></i>
-        </a>
-        <p class="card-text pl-2 align-self-center">
-          {{_('Software source code')}}
-          <a href="https://github.com/rero/rero-ils" class="rero-ils-external-link" title="{{ _('Link to the RERO ILS code source on GitHub') }}">{{_('on GitHub')}}</a>
-          {% if config.RERO_ILS_APP_GIT_HASH %}
-          <br> rero-ils {{ _('version') }}
-          <a href="https://github.com/rero/rero-ils/commit/{{ config.RERO_ILS_APP_GIT_HASH }}" class="rero-ils-external-link" title="{{ _('Link to the RERO ILS code source on GitHub, current used version') }}">{{ config.RERO_ILS_APP_GIT_HASH[:8] }}</a>
-          {% else %}
-          <br> {{ _('version') }}
-          <a href="https://github.com/rero/rero-ils/releases/tag/v{{ version }}" class="rero-ils-external-link" title="{{ _('Link to the RERO ILS code source on GitHub, current used version') }}">{{ version }}</a>
-          {% endif %}
-          {% if config.RERO_ILS_UI_GIT_HASH %}
-            <br>rero-ils-ui {{ _('version') }}
-            <a href="https://github.com/rero/rero-ils-ui/commit/{{ config.RERO_ILS_UI_GIT_HASH }}" class="rero-ils-external-link" title="{{ _('Link to the RERO ILS UI code source on GitHub, current used version') }}">{{ config.RERO_ILS_UI_GIT_HASH[:8] }}</a>
-          {% endif %}
-        </p>
-      </section>
-      <section class="d-flex flex-row">
-        <a href="http://twitter.com/reroplus" class="align-self-center" title="{{ _('Link to the RERO+ Twitter account') }}">
-          <i class="fa fa-2x fa-twitter card-img-top text-dark"></i>
-        </a>
-        <p class="card-text pl-2 align-self-center">
-          <a href="http://twitter.com/reroplus" class="rero-ils-external-link" title="{{ _('Link to the RERO+ Twitter account') }}">@reroplus</a>
-        </p>
-      </section>
+     
+  
     </section>
 </section>
 <section class="col-md-4 order-2 order-md-2 px-4 pt-4 bg-dark text-white rero-rounded" >
     {%- include "rero_ils/_info_test.html" %}
     <!-- HELP -->
-    <h4>{{ _('Help') }}</h4>
-    <p>
-      {{ _('More test logins and documentation is available on the') }}
-      <a href="{{ url_for('wiki.page', url='demo') }}">{{ _('help page') }}</a>
-    </p>
+  
 </section>
 <section class="col-md-4 order-3 order-md-3 px-4 pt-4">
   {%- include "rero_ils/_frontpage_organisation_link.html" %}

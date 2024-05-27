@@ -44,7 +44,7 @@ def dump_loan_current_circulation_policy(loan_pid):
     #        changed (Patron.patron_type, Item.item_type, ...)
     loan = Loan.get_record_by_pid(loan_pid)
     if not loan:
-        abort(404, 'Loan not found')
+        abort(404, 'Loan no0.t found')
     return jsonify(get_circ_policy(loan))
 
 

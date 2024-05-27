@@ -18,14 +18,42 @@
 #}
 <section>
 {% if viewcode == config.RERO_ILS_SEARCH_GLOBAL_VIEW_CODE %}
-  <h5>{{ _('RERO+ catalogue') }}</h5>
-  <ul class="list-unstyled">
-    {% for org in organisations %}
-      {% if  not org.is_test_organisation() %}
-        <li><a href="{{ url_for('rero_ils.index_with_view_code', viewcode=org.code) }}">{{ org.name }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+{% if current_i18n.language == 'en' %}
+
+  <h3>{{ _('LEARN MORE ABOUT UFAZ ') }}</h3>
+  <p><a href="https://www.ufaz.az/en/research/" target="_blank" class="rero-ils-external-link">Research </a> </p>
+  <p><a href="https://www.ufaz.az/en/student-life/student-council/" target="_blank" class="rero-ils-external-link">Student Life</a> </p>
+  <p><a href="https://www.ufaz.az/en/admissions/undergraduate-admissions/" target="_blank" class="rero-ils-external-link">Admissions</a> </p>
+  <p><a href="https://www.ufaz.az/en/academic-offer/undergraduate-programs/" target="_blank" class="rero-ils-external-link">Academic offer</a> </p>
+{% endif %}
+
+
+{% if current_i18n.language == 'fr' %}
+<h3>{{ _('EN SAVOIR PLUS SUR UFAZ ') }}</h3>
+   <p><a href="https://www.ufaz.az/en/research/" target="_blank" class="rero-ils-external-link">Recherche </a> </p>
+   <p><a href="https://www.ufaz.az/en/student-life/student-council/" target="_blank" class="rero-ils-external-link">Vie étudiante</a> </p>
+   <p><a href="https://www.ufaz.az/en/admissions/undergraduate-admissions/" target="_blank" class="rero-ils-external-link">Admissions</a> </p>
+   <p><a href="https://www.ufaz.az/en/academic-offer/undergraduate-programs/" target="_blank" class="rero-ils-external-link">Offre académique</a> </p>
+{% endif %}
+
+
+{% if current_i18n.language == 'de' %}
+
+<h3>{{ _('MEHR ÜBER UFAZ ERFAHREN') }}</h3>
+   <p><a href="https://www.ufaz.az/en/research/" target="_blank" class="rero-ils-external-link">Forschung </a> </p>
+   <p><a href="https://www.ufaz.az/en/student-life/student-council/" target="_blank" class="rero-ils-external-link">Studentenleben</a> </p>
+   <p><a href="https://www.ufaz.az/en/admissions/undergraduate-admissions/" target="_blank" class="rero-ils-external-link">Zulassungen</a> </p>
+   <p><a href="https://www.ufaz.az/en/academic-offer/undergraduate-programs/" target="_blank" class="rero-ils-external-link">Akademisches Angebot</a> </p>
+{% endif %}
+
+{% if current_i18n.language == 'it' %}
+<h3>{{ _('ULTERIORI INFORMAZIONI SU UFAZ ') }}</h3>
+   <p><a href="https://www.ufaz.az/en/research/" target="_blank" class="rero-ils-external-link">Ricerca </a> </p>
+   <p><a href="https://www.ufaz.az/en/student-life/student-council/" target="_blank" class="rero-ils-external-link">Vita studentesca</a> </p>
+   <p><a href="https://www.ufaz.az/en/admissions/undergraduate-admissions/" target="_blank" class="rero-ils-external-link">Ammissioni</a> </p>
+   <p><a href="https://www.ufaz.az/it/offerta-accademica/programmi-universitari/" target="_blank" class="rero-ils-external-link">Offerta accademica</a> </p>
+{% endif %}
+ 
 {% else %}
   <h5>{{ _('Union catalogue') }}</h5>
   <ul class="list-unstyled">

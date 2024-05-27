@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/ <reference types="Cypress" />
 // ***********************************************
 // For more comprehensive examples of custom
 // commands please read more here:

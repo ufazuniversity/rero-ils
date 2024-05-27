@@ -223,14 +223,14 @@ RERO_ILS_SEARCH_TEMPLATE = 'rero_ils/search.html'
 
 # Theme configuration
 # ===================
-#: Brand logo.
-THEME_LOGO = 'images/logo-rero-plus.svg'
+#: Brand logo.  
+THEME_LOGO = 'images/rero21.svg'#rero21.svg -- means ufaz logo.if you want to change you need to rename the new filename as rero21.svg
 #: Site name
-THEME_SITENAME = _('rero-ils')
+THEME_SITENAME = _('UFAZ')
 #: Use default frontpage.
 THEME_FRONTPAGE = False
 #: Frontpage title.
-THEME_FRONTPAGE_TITLE = _('rero-ils')
+THEME_FRONTPAGE_TITLE = _('UFAZ')
 #: Frontpage template.
 THEME_FRONTPAGE_TEMPLATE = 'rero_ils/frontpage.html'
 #: Theme base template.
@@ -496,7 +496,7 @@ RERO_IMPORT_CACHE_EXPIRE = 10
 # ========
 #: Database URI including user and password
 SQLALCHEMY_DATABASE_URI = (
-    'postgresql+psycopg2://rero-ils:rero-ils@localhost/rero-ils'
+    'postgresql+psycopg2://ufaz_admin:Ufaz9988@localhost/ufazDB'
 )
 #: Disable Versioning due to Bad Performance
 DB_VERSIONING = False
@@ -557,6 +557,8 @@ APP_DEFAULT_SECURE_HEADERS = {
     'session_cookie_secure': True,
     'session_cookie_http_only': True,
 }
+
+
 #: Sets cookie with the secure flag (by default False)
 SESSION_COOKIE_SECURE = False
 #: Since HAProxy and Nginx route all requests no matter the host header
@@ -1699,7 +1701,7 @@ RECORDS_REST_ENDPOINTS = dict(
 
 # Default view code for all organisations view
 # TODO: Should be taken into angular
-RERO_ILS_SEARCH_GLOBAL_VIEW_CODE = 'global'
+RERO_ILS_SEARCH_GLOBAL_VIEW_CODE = 'ufaz'
 RERO_ILS_SEARCH_GLOBAL_NAME = _('Global catalog')
 
 # Default number of results in facet

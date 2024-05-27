@@ -25,8 +25,9 @@
         {%- block navbar_brand %}
           {%- if config.THEME_LOGO %}
             <a href="/{% if viewcode != config.RERO_ILS_SEARCH_GLOBAL_VIEW_CODE %}{{ viewcode }}{% endif %}" class="navbar-brand pr-2" id="homepage-logo">
-              <img class="rero-ils-logo navbar-brand" src="{{ url_for('static', filename=config.THEME_LOGO)}}" alt="{{_(config.THEME_SITENAME)}} logo">
-              <div id="{{ viewcode }}-logo"></div>
+              <img class=" rero-ils-logo" style="max-height: 3rem;" src="{{ url_for('static', filename=config.THEME_LOGO)}}" alt="{{_(config.THEME_SITENAME)}}">
+              <div id="{{ viewcode }}-logo">
+              </div>
             </a>
           {%- else %}
             <a href="/{% if viewcode != config.RERO_ILS_SEARCH_GLOBAL_VIEW_CODE %}{{ viewcode }}{% endif %}" class="navbar-brand">{{_(config.THEME_SITENAME)}}</a>
@@ -92,19 +93,6 @@
       </div>
     </nav>
 
-    <!-- start info patron -->
-    {%- include "rero_ils/_patron_info_message.html" %}
-    <!-- end info patron -->
-
-    <!-- Info message (not in production) -->
-    {% if not config.RERO_ILS_STATE_PRODUCTION %}
-      <h5 class="text-center bg-danger text-white py-2 mb-0">
-        {{ _('This is a TEST VERSION.') }}
-        {% if config.RERO_ILS_STATE_LINK_MESSAGE %}
-          <a href={{ config.RERO_ILS_STATE_LINK}} class="rero-ils-external-link text-white">{{ _('Go to the production site.') }}</a>
-        {% endif %}
-      </h5>
-    {% endif %}
 
     <!-- HIDDEN MENUS :: Only visible from medium to extra small screens == -->
     <nav class="navbar-light bg-light d-lg-none d-xl-none border-bottom collapse" id="mobileHide">
